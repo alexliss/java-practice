@@ -43,8 +43,9 @@ public class Main {
     // 3
     public static int[] ifLessThan6MultiplyBy2(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < 6)
+            if (array[i] < 6) {
                 array[i] *= 2;
+            }
         }
         return array;
     }
@@ -53,8 +54,9 @@ public class Main {
     public static int maxNum(int[] array) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
-            if (max < array[i])
+            if (max < array[i]) {
                 max = array[i];
+            }
         }
         return max;
     }
@@ -62,8 +64,9 @@ public class Main {
     public static int minNum(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
-            if (min > array[i])
+            if (min > array[i]) {
                 min = array[i];
+            }
         }
         return min;
     }
