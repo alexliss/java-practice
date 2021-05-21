@@ -59,13 +59,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // 2
-        byte b = 120;
-        short sh = 327;
-        char ch = 'ы';
+        final byte b = 120;
+        final short sh = 327;
+        final char ch = 'ы';
+        final long l = 34568L;
+        final float f = -3.141437830f;
+        final double d = 345.347194801277868976473478363;
         int i = 300045;
-        long l = 34568L;
-        float f = -3.141437830f;
-        double d = 345.347194801277868976473478363;
 
         // tests
         // 2
@@ -74,10 +74,10 @@ public class Main {
 
         // 3
         System.out.println("Введите 4 дробных числа (разделитель дробной части - запятая):");
-        float float1 = scanner.nextFloat();
-        float float2 = scanner.nextFloat();
-        float float3 = scanner.nextFloat();
-        float float4 = scanner.nextFloat();
+        final float float1 = scanner.nextFloat();
+        final float float2 = scanner.nextFloat();
+        final float float3 = scanner.nextFloat();
+        final float float4 = scanner.nextFloat();
 
         System.out.println("a * (b + (c / d)) = " + someCalculations(float1, float2, float3, float4));
 
@@ -94,7 +94,7 @@ public class Main {
         // 7
         System.out.println("Введите имя: ");
         scanner.nextLine(); // после nextFloat пропускается ровно один nextLine, потому что nextFloat передает сюда \n...
-        String name = scanner.nextLine();
+        final String name = scanner.nextLine();
         greetings(name);
 
         // 8
