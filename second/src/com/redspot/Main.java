@@ -2,6 +2,58 @@ package com.redspot;
 
 public class Main {
 
+    public static void main(String[] args) {
+
+        // 1
+        int[] array = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int)(Math.random() * 10 % 2);
+        }
+        printArray(array);
+        printArray(reverseBinaryArray(array));
+
+        // 2
+        array = new int[8];
+        printArray(generateArrayBy3(array));
+
+        // 3
+        array = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        printArray(array);
+        printArray(ifLessThan6MultiplyBy2(array));
+
+        // 4
+        int[][] mArray = new int[11][11]; // m - multidimensional
+        for (int i = 0; i < mArray.length; i++) {
+            for (int j = 0; j < mArray[i].length; j++) {
+                if (i == j || i + j == mArray.length - 1) {
+                    mArray[i][j] = 1;
+                } else {
+                    mArray[i][j] = 0;
+                }
+            }
+        }
+        printArray(mArray);
+
+        // 5
+        array = new int[]{1, 5, 3, 2, 11, 4, -5, 2, 4, 8, 9, 1};
+        printArray(array);
+        System.out.println("max: " + maxNum(array) + "\nmin: " + minNum(array));
+
+        // 6
+        array = new int[]{1, 2, 3, 5};
+        printArray(array);
+        System.out.println(checkBalance(array));
+        array = new int[]{8, 2, 5, 3, 2};
+        System.out.println(checkBalance(array));
+
+        // 7
+        array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        printArray(moveElements(array, -7));
+        array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        printArray(moveElements(array, 3));
+
+    }
+
     // for tests
     public static void printArray(int[] array) {
         for (int i : array) {
@@ -108,55 +160,5 @@ public class Main {
             }
         }
         return array;
-    }
-
-    public static void main(String[] args) {
-
-        // 1
-        int[] array = new int[10];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int)(Math.random() * 10 % 2);
-        }
-        printArray(array);
-        printArray(reverseBinaryArray(array));
-
-        // 2
-        array = new int[8];
-        printArray(generateArrayBy3(array));
-
-        // 3
-        array = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        printArray(array);
-        printArray(ifLessThan6MultiplyBy2(array));
-
-        // 4
-        int[][] mArray = new int[11][11]; // m - multidimensional
-        for (int i = 0; i < mArray.length; i++) {
-            for (int j = 0; j < mArray[i].length; j++) {
-                if (i == j || i + j == mArray.length - 1) {
-                    mArray[i][j] = 1;
-                } else mArray[i][j] = 0;
-            }
-        }
-        printArray(mArray);
-
-        // 5
-        array = new int[]{1, 5, 3, 2, 11, 4, -5, 2, 4, 8, 9, 1};
-        printArray(array);
-        System.out.println("max: " + maxNum(array) + "\nmin: " + minNum(array));
-
-        // 6
-        array = new int[]{1, 2, 3, 5};
-        printArray(array);
-        System.out.println(checkBalance(array));
-        array = new int[]{8, 2, 5, 3, 2};
-        System.out.println(checkBalance(array));
-
-        // 7
-        array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-        printArray(moveElements(array, -7));
-        array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-        printArray(moveElements(array, 3));
-
     }
 }
