@@ -2,7 +2,7 @@ package com.redspot;
 
 public class Bowl {
     private int foodAmount;
-    private int maxFoodAmount = 70;
+    private int maxFoodAmount = 60;
 
     public Bowl() {
         refill();
@@ -27,6 +27,9 @@ public class Bowl {
         }
         foodAmount -= eaten;
         System.out.println("Количество еды в миске уменьшилось на " + eaten);
+        if (foodAmount == 0) {
+            refill();
+        }
         return true;
     }
 

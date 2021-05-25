@@ -55,14 +55,7 @@ public class Main {
             }
 
             System.out.println(bowl.toString());
-            bowl.refill();
-            System.out.println(bowl.toString());
-
-            for (Cat cat : cats) {
-                System.out.println(cat.toString());
-                cat.eat(bowl);
-            }
-
+            
         } catch (Exception error) {
             System.err.println(error.getMessage());
         }
