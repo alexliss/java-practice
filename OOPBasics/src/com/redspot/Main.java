@@ -39,6 +39,30 @@ public class Main {
                 animal.swim(5);
             }
 
+            Cat[] cats = new Cat[5];
+            cats[0] = (Cat) animals[0];
+            cats[1] = (Cat) animals[1];
+            cats[2] = new Cat("Сосиса");
+            cats[3] = new Cat("Франц Фердинанд");
+            cats[4] = new Cat("Цитрус");
+
+            Bowl bowl = new Bowl();
+            System.out.println(bowl.toString());
+
+            for (Cat cat : cats) {
+                System.out.println(cat.toString());
+                cat.eat(bowl);
+            }
+
+            System.out.println(bowl.toString());
+            bowl.refill();
+            System.out.println(bowl.toString());
+
+            for (Cat cat : cats) {
+                System.out.println(cat.toString());
+                cat.eat(bowl);
+            }
+
         } catch (Exception error) {
             System.err.println(error.getMessage());
         }

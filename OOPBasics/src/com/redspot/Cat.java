@@ -3,6 +3,8 @@ package com.redspot;
 public class Cat extends Animal {
     private String name;
     private float jumpHeight = 2;
+    private boolean satiety = false;
+    private int appetite = 15;
 
     public Cat(String name) {
         setName(name);
@@ -33,6 +35,18 @@ public class Cat extends Animal {
         this.jumpHeight = jumpHeight;
     }
 
+    public void eat(Bowl bowl) {
+        if(!satiety) {
+            if (bowl.eatFrom(appetite)) {
+                satiety = true;
+                System.out.println("Котик покушал!");
+            } else {
+                System.out.println("Котику мало еды!");
+            }
+        } else
+            System.out.println("Котик сыт!");
+    }
+
     @Override
     protected boolean isRunDistanceValid(int distance) {
         return super.isRunDistanceValid(distance) && distance <= 200;
@@ -46,5 +60,13 @@ public class Cat extends Animal {
     @Override
     protected boolean isSwimDistanceValid(int distance) {
         return super.isSwimDistanceValid(0);
+    }
+
+    @Override
+    public String toString() {
+        return "Имя котика: " + name + "\n" +
+                "  Cыт? " + satiety + "\n" +
+                "  Аппетит: " + appetite + "\n" +
+                "  Высота прыжка: " + jumpHeight + "\n";
     }
 }
