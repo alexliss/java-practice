@@ -45,6 +45,6 @@ public class Cat extends Animal {
 
     @Override
     protected boolean isSwimDistanceValid(int distance) {
-        return super.isSwimDistanceValid(0);
+        return false;
     }
 }
