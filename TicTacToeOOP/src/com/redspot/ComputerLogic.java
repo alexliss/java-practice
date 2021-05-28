@@ -26,8 +26,8 @@ public class ComputerLogic {
 
     public static int[] computerMove(Game game) {
         int x, y;
-        GameBoard board = game.board;
-        MaxRatingCell maxRatingCell = new MaxRatingCell(BUSY_OR_INVALID_CELL, -1, -1);
+        final GameBoard board = game.board;
+        final MaxRatingCell maxRatingCell = new MaxRatingCell(BUSY_OR_INVALID_CELL, -1, -1);
 
         do {
             x = random.nextInt(board.size);

@@ -4,8 +4,8 @@ import java.util.Scanner;
 import com.redspot.ComputerLogic;
 
 public class Game {
-    GameBoard board;  // игровое поле
-    GamePlayer[] players = new GamePlayer[2];  // массив игроков
+    final GameBoard board;  // игровое поле
+    final GamePlayer[] players = new GamePlayer[2];  // массив игроков
     int playersTurn = 0;  // индекс текущего игрока
 
     private static final Scanner scanner = new Scanner(System.in);
